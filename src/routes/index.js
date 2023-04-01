@@ -2,6 +2,7 @@ import express from 'express';
 import userRoute from './user.route';
 import bookRoute from './book.route';
 import cartRoute from './cart.route';
+import wishlistRoute from './wishlist.route';
 
 /**
  * Function contains Application routes
@@ -23,6 +24,9 @@ const routes = () => {
   
   //route for cart
   router.use('/cart', cartRoute);
+
+  //route for wishlist
+  router.use('/wishlist',wishlistRoute);
 
   return router;
 };
